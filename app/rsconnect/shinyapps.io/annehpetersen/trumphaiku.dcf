@@ -1,0 +1,12 @@
+name: trumphaiku
+title: trumphaiku
+username:
+account: annehpetersen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1105314
+bundleId: 2344386
+url: https://annehpetersen.shinyapps.io/trumphaiku/
+when: 1566466126.02922
+asMultiple: FALSE
+asStatic: FALSE
