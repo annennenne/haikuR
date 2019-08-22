@@ -8,13 +8,6 @@ trumptweets$ID <- 1:nrow(trumptweets)
 #change \n to whitespace
 trumptweets$text <- gsub("\n", " ", trumptweets$text)
 
-#remove links
-#at end of line
-trumptweets$text <- gsub("https://.{+}$", "", trumptweets$text)
-
-#not at end of line
-trumptweets$text <- gsub("https://.{+}[[:blank:]]", "", trumptweets$text)
-
 #remove entries only consisting of links
 trumptweets <- trumptweets[!(trumptweets$text %in% c("", " ")),]  
 
@@ -31,6 +24,16 @@ trumptweets$text <- gsub("&amp;", "&", trumptweets$text)
 #                    stringsAsFactors = FALSE)
 trump <- data.frame(sentence = unlist(get_sentences(trumptweets$text)),
                     stringsAsFactors = FALSE)
+
+
+
+#remove links
+#at end of line
+trump$sentence <- gsub("https://.{+}$", "", trump$sentence)
+
+#not at end of line
+trump$sentence <- gsub("https://.{+}[[:blank:]]", "", trump$sentence)
+
 
 #count number of syllables in each sentence
 library(quanteda)
