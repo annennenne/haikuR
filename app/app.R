@@ -62,7 +62,7 @@ ui <- fluidPage(
     ),
   fluidRow(
           HTML("Tweet source: <a href = \"http://www.trumptwitterarchive.com\"> www.trumptwitterarchive.com</a>. <br>"),
-          HTML("View source code and report bugs at <a href = \"https://github.com/annennenne/haikuR\"> Github </a>")
+          HTML("View source code and report bugs at <a href = \"https://github.com/annennenne/haikuR\"> www.github.com/annennenne/haikuR</a>.")
   )
 
 )

@@ -5,8 +5,8 @@ account: annehpetersen
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1105314
-bundleId: 2344452
+bundleId: 2344854
 url: https://annehpetersen.shinyapps.io/trumphaiku/
-when: 1566467794.36286
+when: 1566476819.2654
 asMultiple: FALSE
 asStatic: FALSE
