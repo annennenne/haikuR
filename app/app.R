@@ -43,26 +43,28 @@ randomHaiku <- function(source = trump, doReturn = FALSE,
 
 # Define UI for app that draws a histogram ----
 ui <- fluidPage(
-  
   # App title ----
   titlePanel("Trump tweet haiku generator"),
   sidebarLayout(
     sidebarPanel(
-      fluidRow("Create a haiku poem out of sentences from Trump's presidential tweets.",
+      HTML("<i>Create a haiku poem out of sentences from Trump's presidential tweets.</i> <br>"),
+      HTML(" <br>"),
       radioButtons("senti", label = "What sentiment should your haiku have?", 
                             choices = list(Random = "random",
                                            Positive = "positive",
                                            Negative = "negative"
                                            ),
-                            selected = "random", inline = TRUE),
+                            selected = "random"),
+      HTML(" <br>"),
       actionButton("doHaiku", label = "Make haiku!")
       ),
-    mainPanel(htmlOutput("outhaiku"))
-    )#,
-  #fluidRow(
-  #         HTML("Tweet source: <a href = \"http://www.trumptwitterarchive.com\"> www.trumptwitterarchive.com </a>")
-  #)
-  
+    mainPanel(h2(htmlOutput("outhaiku")))
+    ),
+  fluidRow(
+          HTML("Tweet source: <a href = \"http://www.trumptwitterarchive.com\"> www.trumptwitterarchive.com</a>. <br>"),
+          HTML("View source code and report bugs at <a href = \"https://github.com/annennenne/haikuR\"> Github </a>")
+  )
+
 )
 
 server <- function(input, output) {
