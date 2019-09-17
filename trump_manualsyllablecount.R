@@ -16,7 +16,10 @@ countHelper <- function() {
   
   name <- gsub(" ", ".", readline())
   usevar <- paste("manualcount_", name, sep = "")
-  trump <- cbind(trump, usevar = NA)
+  
+  if (!(usevar %in% names(trump))) {
+    trump <- cbind(trump, usevar = NA)
+  }
   
   cat(paste("Do you want to start from the first sentence, press enter.",
             "Otherwise, input the number of the sentence you wish to begin at, end with enter:",
